@@ -1,0 +1,10 @@
+.Wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1 auto;
+
+  .Container {
+    flex: 1 auto;
+    background-color: #222529;
+  }
+}

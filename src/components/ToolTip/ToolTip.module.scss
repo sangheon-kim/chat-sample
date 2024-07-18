@@ -1,0 +1,76 @@
+$arrow: 4px;
+
+.Button {
+  color: var(--simentic-primary);
+}
+.ToolTip {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background-color: #1a1d21;
+  color: var(--simentic-surf-container-lowest, #fff);
+  // @include body4;
+
+  &[data-popper-reference-hidden="true"] {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .Arrow {
+    position: absolute;
+    width: $arrow;
+    height: $arrow;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: $arrow;
+      height: $arrow;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(225deg);
+      background-color: #1a1d21;
+    }
+  }
+
+  & [data-popper-placement^="top"] > .Arrow {
+    bottom: -$arrow;
+    width: calc($arrow * 2);
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  &[data-popper-placement^="bottom"] > .Arrow {
+    top: -$arrow;
+    width: calc($arrow * 2);
+
+    &::before {
+      top: 100%;
+    }
+  }
+
+  &[data-popper-placement^="left"] > .Arrow {
+    right: -$arrow;
+    height: calc($arrow * 2);
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &[data-popper-placement^="right"] > .Arrow {
+    left: -$arrow;
+    height: calc($arrow * 2);
+
+    &::before {
+      left: 100%;
+    }
+  }
+}

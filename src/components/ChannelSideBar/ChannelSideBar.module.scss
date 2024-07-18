@@ -1,0 +1,74 @@
+.Wrapper {
+  background-color: #241228;
+  width: 223px;
+  flex-shrink: 0;
+  color: #fff;
+  padding: 20px 8px;
+}
+
+.WorkspaceInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px 0 8px;
+
+  .WorkspaceNameButton {
+    color: inherit;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    flex: 1 auto;
+    overflow: hidden;
+  }
+}
+
+.WorkspaceName {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  margin-right: 4px;
+}
+.ChannelItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #ddd;
+  text-align: left;
+  overflow: hidden;
+  padding: 0 4px 0 4px;
+  overflow: hidden;
+
+  &.selected {
+    background-color: #7d3986;
+    color: #fff;
+  }
+
+  span {
+    overflow: hidden;
+    flex: 1 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 8px 0 0;
+  }
+}
+
+.ChannelList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.ChannelItem {
+  display: flex;
+  flex-direction: row !important;
+  width: 100%;
+  // justify-content: flex-start;
+  // text-align: left;
+  // align-items: flex-start;
+  gap: 4px;
+}

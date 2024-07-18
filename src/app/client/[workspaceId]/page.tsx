@@ -13,7 +13,7 @@ export default async function WorkspacePage(props: WorkspacePageProps) {
     params: { workspaceId },
   } = props;
 
-  const [channelList, workspaceData] = await Promise.all([
+  const [channelList] = await Promise.all([
     channelService.getChannels({
       path: {
         workspaceId,
@@ -26,7 +26,7 @@ export default async function WorkspacePage(props: WorkspacePageProps) {
     }),
   ]);
 
-  if (workspaceData) {
+  if (channelList.results.length > 0) {
     redirect(`/client/${workspaceId}/${channelList.results[0].id}`);
   }
 

@@ -1,3 +1,7 @@
+:root {
+  --sidebar-color: #421348;
+}
+
 html,
 body {
   width: 100%;
