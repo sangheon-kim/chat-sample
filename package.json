@@ -25,5 +25,10 @@
     "eslint-config-next": "14.2.5",
     "sass": "^1.77.8",
     "typescript": "^5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
